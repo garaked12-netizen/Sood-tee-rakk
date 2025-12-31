@@ -97,15 +97,19 @@
   }
 </script>
 
-</body>
-</html>
 <audio id="mySong" loop>
-  <source src="music.mp3" type="audio/mpeg">
+  <source src="chuefai.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-  document.addEventListener('click', function() {
+  // ฟังก์ชันสำหรับสั่งให้เพลงเล่น
+  function playMusic() {
     var audio = document.getElementById("mySong");
     audio.play();
+  }
+
+  // แถม: สั่งให้เพลงเล่นทันทีที่จิ้มหน้าจอครั้งแรก (เผื่อไม่ได้กดปุ่ม)
+  document.addEventListener('click', function() {
+    playMusic();
   }, { once: true });
 </script>
