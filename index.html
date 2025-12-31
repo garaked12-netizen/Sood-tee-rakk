@@ -99,3 +99,13 @@
 
 </body>
 </html>
+<audio id="mySong" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener('click', function() {
+    var audio = document.getElementById("mySong");
+    audio.play();
+  }, { once: true });
+</script>
